@@ -1,0 +1,7 @@
+.page {
+  display: flex;
+  flex-direction: column;
+  width: calc(100% - 1.5rem);
+  max-width: 1140px;
+  margin: 0 auto;
+}
