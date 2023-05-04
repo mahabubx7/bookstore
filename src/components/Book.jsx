@@ -42,7 +42,7 @@ const Book = ({ info, remove }) => {
 };
 
 Book.propTypes = {
-  info: PropTypes.objectOf({
+  info: PropTypes.shape({
     id: PropTypes.string.isRequired,
     name: PropTypes.string.isRequired,
     author: PropTypes.string.isRequired,

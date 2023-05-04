@@ -25,15 +25,14 @@ const Form = ({ addBook }) => {
     });
   };
 
-  // const
-
   return (
     <>
-      <form onChange={handleChange} onSubmit={handleSubmit}>
+      <form onSubmit={handleSubmit}>
         <input
           type="text"
           name="name"
           value={book.name}
+          onChange={handleChange}
           placeholder="Book title"
         />
 
@@ -41,6 +40,7 @@ const Form = ({ addBook }) => {
           type="text"
           name="author"
           value={book.author}
+          onChange={handleChange}
           placeholder="Author name"
         />
 
