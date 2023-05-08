@@ -1,7 +1,10 @@
 import { useState } from 'react';
-import PropTypes from 'prop-types';
+import { useDispatch } from 'react-redux';
+import { add } from '../redux/bookSlice';
 
-const Form = ({ addBook }) => {
+const Form = () => {
+  const dispatch = useDispatch();
+
   const [book, setBook] = useState({
     name: '',
     author: '',
@@ -18,7 +21,7 @@ const Form = ({ addBook }) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    addBook(book);
+    dispatch(add(book));
     setBook({
       name: '',
       author: '',
@@ -49,7 +52,7 @@ const Form = ({ addBook }) => {
         />
 
         <select name="category" onChange={handleChange} value={book.category} required>
-          <option disabled selected value="">select your category</option>
+          <option disabled value="">select your category</option>
           <option value="web-development">web development</option>
           <option value="computer-science">computer science</option>
           <option value="data-science">data science</option>
@@ -59,10 +62,6 @@ const Form = ({ addBook }) => {
       </form>
     </>
   );
-};
-
-Form.propTypes = {
-  addBook: PropTypes.func.isRequired,
 };
 
 export default Form;
