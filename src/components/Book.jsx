@@ -10,7 +10,7 @@ const Book = ({ info }) => {
       <div className="book-item">
         <div className="left-card">
           <div className="information">
-            <h4>{info.name}</h4>
+            <h4>{info.title}</h4>
             <small>{info.author}</small>
             <p>{info.category}</p>
             <ul className="btn-actions">
@@ -18,7 +18,7 @@ const Book = ({ info }) => {
                 <button type="button">comments</button>
               </li>
               <li>
-                <button type="button" onClick={() => dispatch(remove(info.id))}>remove</button>
+                <button type="button" onClick={() => dispatch(remove(info.item_id))}>remove</button>
               </li>
               <li>
                 <button type="button">edit</button>
@@ -43,8 +43,8 @@ const Book = ({ info }) => {
 
 Book.propTypes = {
   info: PropTypes.shape({
-    id: PropTypes.string.isRequired,
-    name: PropTypes.string.isRequired,
+    item_id: PropTypes.string.isRequired,
+    title: PropTypes.string.isRequired,
     author: PropTypes.string.isRequired,
     progress: PropTypes.number.isRequired,
     category: PropTypes.string.isRequired,

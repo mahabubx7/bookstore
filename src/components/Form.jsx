@@ -6,7 +6,7 @@ const Form = () => {
   const dispatch = useDispatch();
 
   const [book, setBook] = useState({
-    name: '',
+    title: '',
     author: '',
     progress: 0,
     category: '',
@@ -23,7 +23,7 @@ const Form = () => {
     e.preventDefault();
     dispatch(add(book));
     setBook({
-      name: '',
+      title: '',
       author: '',
       progress: 0,
       category: '',
@@ -35,8 +35,8 @@ const Form = () => {
       <form onSubmit={handleSubmit}>
         <input
           type="text"
-          name="name"
-          value={book.name}
+          name="title"
+          value={book.title}
           onChange={handleChange}
           placeholder="Book title"
           required

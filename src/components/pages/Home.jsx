@@ -13,7 +13,7 @@ const Home = () => {
     <>
       <div className="books">
         {bookArr.length > 0 ? bookArr.map((book) => (
-          <Book key={book.id} info={book} />
+          <Book key={book.item_id} info={book} />
         )) : null}
       </div>
 
