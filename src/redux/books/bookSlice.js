@@ -2,15 +2,7 @@ import { createSlice } from '@reduxjs/toolkit';
 import { v4 as uuidv4 } from 'uuid';
 
 const initialState = {
-  books: [
-    {
-      id: uuidv4(),
-      name: 'Learn Modern React',
-      author: 'John Doe',
-      progress: 80,
-      category: 'web-development',
-    },
-  ],
+  books: [], // empty array
 };
 
 export const bookSlice = createSlice({

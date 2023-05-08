@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';
-import { add } from '../redux/bookSlice';
+import { add } from '../redux/books/bookSlice';
 
 const Form = () => {
   const dispatch = useDispatch();
