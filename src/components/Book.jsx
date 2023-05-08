@@ -13,6 +13,7 @@ const Book = ({ info, remove }) => {
           <div className="information">
             <h4>{book.name}</h4>
             <small>{book.author}</small>
+            <p>{book.category}</p>
             <ul className="btn-actions">
               <li>
                 <button type="button">comments</button>
@@ -47,6 +48,7 @@ Book.propTypes = {
     name: PropTypes.string.isRequired,
     author: PropTypes.string.isRequired,
     progress: PropTypes.number.isRequired,
+    category: PropTypes.string.isRequired,
   }).isRequired,
   remove: PropTypes.func.isRequired,
 };

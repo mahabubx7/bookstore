@@ -6,6 +6,7 @@ const Form = ({ addBook }) => {
     name: '',
     author: '',
     progress: 0,
+    category: '',
   });
 
   const handleChange = (e) => {
@@ -22,6 +23,7 @@ const Form = ({ addBook }) => {
       name: '',
       author: '',
       progress: 0,
+      category: '',
     });
   };
 
@@ -34,6 +36,7 @@ const Form = ({ addBook }) => {
           value={book.name}
           onChange={handleChange}
           placeholder="Book title"
+          required
         />
 
         <input
@@ -42,7 +45,15 @@ const Form = ({ addBook }) => {
           value={book.author}
           onChange={handleChange}
           placeholder="Author name"
+          required
         />
+
+        <select name="category" onChange={handleChange} value={book.category} required>
+          <option disabled selected value="">select your category</option>
+          <option value="web-development">web development</option>
+          <option value="computer-science">computer science</option>
+          <option value="data-science">data science</option>
+        </select>
 
         <button type="submit" className="btn-submit">add book</button>
       </form>

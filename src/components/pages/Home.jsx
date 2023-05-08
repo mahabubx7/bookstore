@@ -9,6 +9,7 @@ const bookApiReturn = [
     name: 'Learn Modern React',
     author: 'John Doe',
     progress: 80,
+    category: 'web-development',
   },
 ];
 
