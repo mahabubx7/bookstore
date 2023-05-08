@@ -33,9 +33,9 @@
 
 A web application for storing various book's information and listing it.
 
-## 🛠 Built With <a name="built-with">`HTML/CSS`,`Webpack`, and `React`</a>
+## 🛠 Built With <a name="built-with">`HTML/CSS`,`Webpack`, `Redux`, and `React`</a>
 
-### Tech Stack <a name="tech-stack">`HTML/CSS` with `Webpack` & `React`</a>
+### Tech Stack <a name="tech-stack">`HTML/CSS` with `Webpack`, `Redux` & `React`</a>
 
 <details>
   <summary>Client</summary>
@@ -50,6 +50,10 @@ A web application for storing various book's information and listing it.
   <ul>
     <li><a href="https://react.dev/">React</a></li>
   </ul>
+
+  <ul>
+    <li><a href="https://redux.js.org/">Redux</a></li>
+  </ul>
 </details>
 
 <!-- Features -->
@@ -60,6 +64,7 @@ A web application for storing various book's information and listing it.
 - **[Nodejs for development]**
 - **[Webpack for static bundler]**
 - **[React: a frontend library]**
+- **[Redux: for global state management]**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -134,8 +139,7 @@ For running Linter-checks:
 Not available yet. [It's coming soon.]
 
 ### Deployment
-It will updated just after the first successful deployment.
-<!-- Deployed in `Github Pages`. [Live Preview](https://bookstore-m7.onrender.com/) -->
+Deployed in `Github Pages`. [Live Preview](https://bookstore-mahabubx7.netlify.app/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -155,8 +159,10 @@ It will updated just after the first successful deployment.
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-- [ ] **[React Components & Props]**
-- [ ] **[React Router]**
+- [x] **[React Components & Props]**
+- [x] **[React Router]**
+- [x] **[Redux, Redux-Toolkit]**
+- [ ] **[Test Driven Development (TDD)]**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

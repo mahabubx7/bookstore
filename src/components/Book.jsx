@@ -1,27 +1,27 @@
 import PropTypes from 'prop-types';
-import { useState } from 'react';
+import { useDispatch } from 'react-redux';
+import { remove } from '../redux/books/bookSlice';
 
-const Book = ({ info, remove }) => {
-  const [book, setBook] = useState({ ...info });
-
-  const updateBook = () => setBook({ ...info });
+const Book = ({ info }) => {
+  const dispatch = useDispatch();
 
   return (
     <>
       <div className="book-item">
         <div className="left-card">
           <div className="information">
-            <h4>{book.name}</h4>
-            <small>{book.author}</small>
+            <h4>{info.title}</h4>
+            <small>{info.author}</small>
+            <p>{info.category}</p>
             <ul className="btn-actions">
               <li>
                 <button type="button">comments</button>
               </li>
               <li>
-                <button type="button" onClick={() => remove(book.id)}>remove</button>
+                <button type="button" onClick={() => dispatch(remove(info.item_id))}>remove</button>
               </li>
               <li>
-                <button type="button" onClick={updateBook}>edit</button>
+                <button type="button">edit</button>
               </li>
             </ul>
           </div>
@@ -29,7 +29,7 @@ const Book = ({ info, remove }) => {
           <div className="progress">
             <div className="progress-bar" />
             <div className="progress-info">
-              <h3>{`${book.progress} %`}</h3>
+              <h3>{`${info.progress} %`}</h3>
               <small>completed</small>
             </div>
           </div>
@@ -43,12 +43,12 @@ const Book = ({ info, remove }) => {
 
 Book.propTypes = {
   info: PropTypes.shape({
-    id: PropTypes.string.isRequired,
-    name: PropTypes.string.isRequired,
+    item_id: PropTypes.string.isRequired,
+    title: PropTypes.string.isRequired,
     author: PropTypes.string.isRequired,
     progress: PropTypes.number.isRequired,
+    category: PropTypes.string.isRequired,
   }).isRequired,
-  remove: PropTypes.func.isRequired,
 };
 
 export default Book;
