@@ -70,7 +70,6 @@
 
   .progress {
     display: flex;
-    justify-content: flex-end;
     align-items: center;
     padding-right: 55px;
     border-right: 2px solid #f0eeee;
@@ -104,6 +103,7 @@
     font-size: 2rem;
     font-weight: 500;
     color: #4b4b4b;
+    margin-top: -0.5rem;
   }
 
   small {
