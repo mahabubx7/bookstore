@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { fetchBooks } from '../../redux/books/bookSlice';
 import Book from '../Book';
 import Form from '../Form';
+import '../styles/books.scss';
 
 const Home = () => {
   const { data, isLoading, error } = useSelector((state) => state.book);

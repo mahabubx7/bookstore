@@ -15,9 +15,9 @@ const Book = ({ info }) => {
       <div className="book-item">
         <div className="left-card">
           <div className="information">
+            <p>{info.category}</p>
             <h4>{info.title}</h4>
             <small>{info.author}</small>
-            <p>{info.category}</p>
             <ul className="btn-actions">
               <li>
                 <button type="button">comments</button>
@@ -32,7 +32,10 @@ const Book = ({ info }) => {
           </div>
 
           <div className="progress">
-            <div className="progress-bar" />
+            <div
+              className="progress-bar"
+              style={{ background: `conic-gradient(#e0e0e0 ${info.progress}deg, #0290ff ${info.progress}deg)` }}
+            />
             <div className="progress-info">
               <h3>{`${info.progress} %`}</h3>
               <small>completed</small>
@@ -40,7 +43,13 @@ const Book = ({ info }) => {
           </div>
         </div>
 
-        <div className="right-card" />
+        <div className="right-card">
+          <p>current chapter</p>
+          <h4>chapter 7</h4>
+          <div>
+            <button type="button">update progress</button>
+          </div>
+        </div>
       </div>
     </>
   );
