@@ -1,20 +1,25 @@
-import { useEffect, useState } from 'react';
-import { useSelector } from 'react-redux';
+import { useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { fetchBooks } from '../../redux/books/bookSlice';
 import Book from '../Book';
 import Form from '../Form';
 
 const Home = () => {
-  const { books } = useSelector((state) => state.books);
-  const [bookArr, setBookArr] = useState([]);
+  const { data, isLoading, error } = useSelector((state) => state.book);
+  const dispatch = useDispatch();
 
-  useEffect(() => setBookArr([...books]), [books]);
+  useEffect(() => {
+    dispatch(fetchBooks());
+  }, [dispatch]);
+
+  if (isLoading) return (<p>Loading...!</p>);
+
+  if (error) return (<p>Something went wrong!</p>);
 
   return (
     <>
       <div className="books">
-        {bookArr.length > 0 ? bookArr.map((book) => (
-          <Book key={book.item_id} info={book} />
-        )) : null}
+        {data.map((book) => (<Book key={book.item_id} info={book} />))}
       </div>
 
       <Form />
