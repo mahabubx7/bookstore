@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { v4 as uuid } from 'uuid';
 import { add, createBook } from '../redux/books/bookSlice';
+import './styles/form.scss';
 
 const Form = () => {
   const dispatch = useDispatch();
@@ -33,6 +34,7 @@ const Form = () => {
 
   return (
     <>
+      <h3>add new book</h3>
       <form onSubmit={handleSubmit}>
         <input
           type="text"
@@ -53,7 +55,7 @@ const Form = () => {
         />
 
         <select name="category" onChange={handleChange} value={book.category} required>
-          <option disabled value="">select your category</option>
+          <option disabled value="">category</option>
           <option value="web-development">web development</option>
           <option value="computer-science">computer science</option>
           <option value="data-science">data science</option>

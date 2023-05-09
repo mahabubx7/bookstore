@@ -1,0 +1,61 @@
+h3 {
+  text-transform: uppercase;
+  color: #8f8b8b;
+  margin-bottom: 0.5rem;
+}
+
+form {
+  display: flex;
+  width: 100%;
+  gap: 1.25rem;
+
+  input,
+  select {
+    display: inline-block;
+    border: 0.1rem solid rgba(143, 139, 139, 0.25);
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+    outline: 0;
+    background-color: white;
+    color: #626161;
+
+    &::placeholder {
+      color: #a8a8a8;
+    }
+  }
+
+  input[name="title"] {
+    width: 54.83%;
+    max-width: 510px;
+  }
+
+  input[name="author"] {
+    width: 27.95%;
+    max-width: 260px;
+  }
+
+  select {
+    width: 17.2%;
+    max-width: 160px;
+    text-transform: capitalize;
+
+    & > option {
+      display: inline-block !important;
+      padding: 1rem 0.5rem !important;
+      min-height: 1.5rem;
+    }
+  }
+
+  .btn-submit {
+    border: 0;
+    outline: 0;
+    background-color: #0290ff;
+    color: white;
+    text-transform: uppercase;
+    padding: 0.5rem 1.5rem;
+    font-size: 0.75rem;
+    font-weight: 600;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+}

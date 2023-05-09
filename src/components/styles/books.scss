@@ -1,0 +1,115 @@
+.books {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem 0;
+  padding-top: 2.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.book-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: white;
+  padding: 1rem;
+  border-radius: 5px;
+  border: 2px solid rgba(224, 224, 224, 0.7);
+}
+
+.right-card {
+  display: flex;
+  flex-direction: column;
+  width: 25%;
+  min-width: 200px;
+  background-color: white;
+  padding-right: 100px;
+  gap: 0;
+
+  p,
+  h4 {
+    margin: 0.35rem 0;
+  }
+
+  p {
+    color: #8f8b8b;
+    text-transform: uppercase;
+  }
+
+  h4 {
+    font-weight: 400;
+    font-size: 1.35rem;
+    text-transform: capitalize;
+  }
+
+  button {
+    display: inline;
+    margin-top: 0.75rem;
+    background-color: #0290ff;
+    color: white;
+    padding: 0.5rem 1.5rem;
+    text-transform: uppercase;
+    border: 0;
+    outline: 0;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+}
+
+.left-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 720px;
+  background-color: white;
+
+  p {
+    color: #8f8b8b;
+    text-transform: capitalize;
+  }
+
+  .progress {
+    padding-right: 55px;
+    border-right: 2px solid #f0eeee;
+  }
+}
+
+.btn-actions {
+  display: flex;
+  list-style: none;
+  padding-left: 0;
+  justify-content: flex-start;
+  gap: 0 0.75rem;
+
+  button {
+    border: 0;
+    outline: 0;
+    background-color: transparent;
+    text-transform: capitalize;
+    color: #0290ff;
+    padding: 0;
+    border-right: 2px solid #e0e0e0;
+    padding-right: 0.75rem;
+    cursor: pointer;
+  }
+
+  li {
+    &:last-child {
+      button {
+        border: 0;
+      }
+    }
+  }
+}
+
+.information {
+  h4 {
+    margin: 0.5rem 0;
+    font-size: 1.4rem;
+  }
+
+  small {
+    color: #0290ff;
+    text-transform: capitalize;
+  }
+}
