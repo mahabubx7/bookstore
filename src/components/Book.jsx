@@ -32,7 +32,10 @@ const Book = ({ info }) => {
           </div>
 
           <div className="progress">
-            <div className="progress-bar" />
+            <div
+              className="progress-bar"
+              style={{ background: `conic-gradient(#e0e0e0 ${info.progress}deg, #0290ff ${info.progress}deg)` }}
+            />
             <div className="progress-info">
               <h3>{`${info.progress} %`}</h3>
               <small>completed</small>
